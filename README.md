@@ -16,6 +16,7 @@
 |tweet|text|
 |image|string|
 |user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :users
 - belongs_to :groups
@@ -23,7 +24,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
+|name|string|null: false|
 ### Association
 - has_many :posts
 - has_many :groups_users
