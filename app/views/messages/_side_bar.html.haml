@@ -1,0 +1,27 @@
+.chat-side
+  .side-header
+    .chat-header-box
+      %h2.chat-user-name
+        Ken
+      .chat-edit
+        = link_to '', class: "chat-edit_link" do
+          = fa_icon 'edit', class: "user-edit_new-group"
+        = link_to '', class: "chat-edit_link" do
+          = fa_icon 'cog', class: "user-edit_edit-user"
+  .groups
+    .group
+      .group-name
+        %h3 Group1
+      .group-message
+        %p Message1
+    .group
+      .group-name
+        %h3 Group2
+      .group-message
+        %p Message2
+
+
+
+
+
+
