@@ -1,0 +1,35 @@
+.wrapper
+  .chat-main
+    .main-header
+      .main-header_left-box
+        .main-header_left-box_current-group
+          Group1
+        .main-header_left-box_member-list
+          Member : Ken
+      .main-header_edit-btn
+        Edit
+    .messages
+      .message
+        .message_uppder-info
+          .message_uppder-info_talker
+            Ken
+          .message_uppder-info_date
+            2019/11/06(Wed) 16:07:03
+        .message_text
+          Hello!
+      .message
+        .message_uppder-info
+          .message_uppder-info_talker
+            Ken
+          .message_uppder-info_date
+            2019/11/07(Wed) 16:07:03
+        .message_text
+          Bye!
+    .form
+      .new-message
+        .input-box
+          %input#message_content.input-box_text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+          %label.input-box_image
+            %i.fas.fa-image
+            %input.input-box_image_file{:type => "file"}/
+        %input.form_submit-btn{:type => "submit", :value => "Send"}/

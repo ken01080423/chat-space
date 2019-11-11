@@ -1,0 +1,123 @@
+.chat-main{
+  width: calc(100vw - 300px);
+  float: left;
+  display: block;
+  .main-header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #eee;
+    padding: 0 40px;
+    height: 100px;
+    overflow: scroll;
+    box-sizing: border-box;
+    &_left-box{
+      margin-top: 35px;
+      box-sizing: border-box;
+      &_current-group{
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 15px;
+      }
+      &_member-list{
+        font-size: 12px;
+        color: #999999;
+        box-sizing: border-box;
+      }
+    }
+    &_edit-btn{
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px #38aef0;
+      color: #38aef0;
+      position: absolute;
+      right: 40px;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.messages{
+  height:calc(100vh - 190px);
+  width: calc(100vw - 300px);
+  background-color: #fafafa;
+  padding: 46px 40px;
+  overflow: scroll;
+  box-sizing: border-box;
+  position: relative;
+  .message{
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    &_uppder-info{
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 10px;
+      &_talker{
+        color: #434a54;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      &_date{
+        color: #999999;
+        font-size: 12px;
+        margin-left: 10px;
+      }
+    }
+    &_text{
+      box-sizing: border-box;
+      color: #434a54;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+.form{
+  box-sizing: border-box;
+  background-color: #DDDDDD;
+  height: 90px;
+  padding: 20px 40px 20px 40px;
+  width: calc(100vw - 300px);
+  .new-message{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    .input-box{
+      height: 50px;
+      width: 100%;
+      position: relative;
+      &_text{
+        height: 50px;
+        width: 100%;
+        padding: 0 40px 0 10px;
+        color: #434a54;
+        border-style: none;
+        box-sizing: border-box;
+      }
+      &_image{
+        font-size: 1.3rem;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+        &_image_file{
+          display: none;
+        }
+      }
+    .form_submit-btn{
+      background-color: #38AEF0;
+      color: white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+      border-width: 1px;
+      box-sizing: border-box;
+      border-bottom-style:solid;
+    }
+  }
+}
