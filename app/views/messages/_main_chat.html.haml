@@ -28,8 +28,8 @@
     .form
       .new-message
         .input-box
-          %input#message_content.input-box_text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+          %input#message_content.input-box_text{name: "message[content]", placeholder: "type a message", type: "text"}/
           %label.input-box_image
             %i.fas.fa-image
-            %input.input-box_image_file{:type => "file"}/
-        %input.form_submit-btn{:type => "submit", :value => "Send"}/
+            %input.input-box_image_file{type: "file"}/
+        %input.form_submit-btn{type: "submit", value: "Send"}/

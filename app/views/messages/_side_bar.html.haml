@@ -1,16 +1,13 @@
 .chat-side
   .side-header
     .chat-header-box
-      .chat-user-name
-        %h2 Ken
+      %h2.chat-user-name
+        Ken
       .chat-edit
-        %ul
-          %li
-            %a{:href => ""}
-              %i.fa.fa-edit
-          %li
-            %a{:href => ""}
-              %i.fa.fa-cog
+        = link_to '', class: "chat-edit_link" do
+          = fa_icon 'edit', class: "user-edit_new-group"
+        = link_to '', class: "chat-edit_link" do
+          = fa_icon 'cog', class: "user-edit_edit-user"
   .groups
     .group
       .group-name
@@ -22,6 +19,7 @@
         %h3 Group2
       .group-message
         %p Message2
+
 
 
 
