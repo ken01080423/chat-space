@@ -3,34 +3,21 @@
     .main-header
       .main-header_left-box
         .main-header_left-box_current-group
-          Group1
+          = @group.name
         .main-header_left-box_member-list
-          Member : Ken
+          Members:
+          - @group.users.each do |user|
+            = user.name
       .main-header_edit-btn
-        = link_to root_path do
+        = link_to edit_group_path(current_user) do
           Edit
     .messages
-      .message
-        .message_uppder-info
-          .message_uppder-info_talker
-            Ken
-          .message_uppder-info_date
-            2019/11/06(Wed) 16:07:03
-        .message_text
-          Hello!
-      .message
-        .message_uppder-info
-          .message_uppder-info_talker
-            Ken
-          .message_uppder-info_date
-            2019/11/07(Wed) 16:07:03
-        .message_text
-          Bye!
+      = render @messages
     .form
-      .new-message
-        .input-box
-          %input#message_content.input-box_text{name: "message[content]", placeholder: "type a message", type: "text"}/
-          %label.input-box_image
-            = fa_icon 'image'
-            %input.input-box_image_file{type: "file"}/
-        %input.form_submit-btn{type: "submit", value: "Send"}/
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'image', class: "icon"
+          = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
