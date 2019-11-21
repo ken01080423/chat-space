@@ -8,7 +8,7 @@ $(function(){
             ${message.user_name}
           </div>
           <div class="upper-message__date">
-            ${message.date}
+            ${message.created_at}
           </div>
         </div>
         <div class="lower-message">
@@ -33,6 +33,7 @@ $(function(){
       contentType: false
     })
     .done(function(data){
+      console.log(data);
       var html = buildHTML(data);
       $('.messages').append(html);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');   
@@ -54,7 +55,7 @@ $(function(){
           dataType: 'json', 
           data: {id: last_message_id} 
         })
-        .done(function (messages) { 
+        .done(function (messages) {
           var insertHTML = '';
           messages.forEach(function (message) {
             insertHTML = buildHTML(message); 
