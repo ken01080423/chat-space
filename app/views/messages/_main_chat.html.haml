@@ -9,7 +9,7 @@
           - @group.users.each do |user|
             = user.name
       .main-header_edit-btn
-        = link_to edit_group_path(current_user) do
+        = link_to edit_group_path(params[:group_id]) do
           Edit
     .messages
       = render @messages
